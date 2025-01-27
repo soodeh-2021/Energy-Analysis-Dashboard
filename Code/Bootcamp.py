@@ -17,7 +17,7 @@ st.set_page_config(
 alt.themes.enable("dark")
 
 # Loading file and converting the date into the right format  
-data = pd.read_csv(r"C:\AAAAA\Data BootCamp\project\Panel format.csv")
+data = pd.read_csv("Data/Panel format.csv")
 data["Year"] = pd.to_datetime(data["Year"], format="%Y")
 data["Year"] = data["Year"].dt.year
 
@@ -25,7 +25,7 @@ with st.sidebar:
     st.title("🌩️ Energy Dashboard")
     st.markdown("---")
 
-    sidebar_image = Image.open(r"C:\AAAAA\Data BootCamp\project\11.jpg")
+    sidebar_image = Image.open("Image/11.jpg")
     st.sidebar.image(sidebar_image, use_column_width=True)
 
     # Select a Region
@@ -50,7 +50,7 @@ st.markdown("""
 This dashboard provides a detailed overview of various energy production trends in the selected country. Navigate using the sidebar to choose a different country.
 """)
 
-main_image = Image.open(r"C:\AAAAA\Data BootCamp\project\22.jpg")
+main_image = Image.open("Image/22.jpg")
 st.image(main_image, caption="Energy Sources", use_column_width=True)
 
 # Chart creation function
