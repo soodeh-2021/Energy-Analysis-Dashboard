@@ -26,7 +26,7 @@ with st.sidebar:
     st.markdown("---")
 
     sidebar_image = Image.open("Image/11.jpg")
-    st.sidebar.image(sidebar_image, use_column_width=True)
+    st.sidebar.image(sidebar_image, use_container_width=True)
 
     # Select a Region
     region = st.sidebar.selectbox("Select a Region:", data["Region"].unique())
@@ -51,7 +51,7 @@ This dashboard provides a detailed overview of various energy production trends 
 """)
 
 main_image = Image.open("Image/22.jpg")
-st.image(main_image, caption="Energy Sources", use_column_width=True)
+st.image(main_image, caption="Energy Sources", use_container_width=True)
 
 # Chart creation function
 def create_chart(data, y, title, yaxis_title):
